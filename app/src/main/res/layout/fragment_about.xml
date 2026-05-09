@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/neo_brutal_container"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_reaksi" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ReAkSi"
+        android:fontFamily="sans-serif-black"
+        android:textSize="32sp"
+        android:textColor="#000000"/>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:background="#B71C1C"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respons Emergensi, Aksi &amp; Keselamatan Informasi"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#333333"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/neo_brutal_yellow"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEVELOPED BY:"
+            android:fontFamily="sans-serif-black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KELOMPOK 4\nMOBILE PROGRAMMING 2026"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>

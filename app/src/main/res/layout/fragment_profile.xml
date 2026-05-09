@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEDICAL IDENTITY"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/neo_brutal_container"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="30dp">
+
+            <EditText
+                android:id="@+id/etNama"
+                android:hint="Nama Lengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="12dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000000"/>
+
+            <EditText
+                android:id="@+id/etGoldar"
+                android:hint="Golongan Darah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="12dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000000"/>
+
+            <EditText
+                android:id="@+id/etAlergi"
+                android:hint="Riwayat Alergi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="12dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000000"/>
+
+            <EditText
+                android:id="@+id/etKontak"
+                android:hint="No. Kontak Darurat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="12dp"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="UPDATE CARD"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/neo_brutal_yellow"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_reaksi"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerInside"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDispNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA: -"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDispGoldar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GOLDAR: -"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDispAlergi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ALERGI: -"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDispKontak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KONTAK: -"
+                    android:textColor="#000000"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
