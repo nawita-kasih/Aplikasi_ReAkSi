@@ -1,78 +1,68 @@
 package id.projectkel4.reaksi;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class ProfileFragment extends Fragment {
 
-    private EditText etNama, etGoldar, etAlergi, etKontak;
-    private TextView tvDispNama, tvDispGoldar, tvDispAlergi, tvDispKontak;
-    private Button btnSave;
+    private TextView tvCardName, tvCardAgeGen, tvCardBlood, tvCardPhysical, tvCardDisease, tvCardAllergy, tvCardMeds, tvCardInsurance, tvCardContact1, tvCardContact2;
+    private Button btnGoToEdit;
 
-    public ProfileFragment() { }
-
+    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate layout
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        // Inisialisasi dengan pengecekan aman
-        try {
-            etNama = view.findViewById(R.id.etNama);
-            etGoldar = view.findViewById(R.id.etGoldar);
-            etAlergi = view.findViewById(R.id.etAlergi);
-            etKontak = view.findViewById(R.id.etKontak);
+        tvCardName = view.findViewById(R.id.tvCardName);
+        tvCardAgeGen = view.findViewById(R.id.tvCardAgeGen);
+        tvCardBlood = view.findViewById(R.id.tvCardBlood);
+        tvCardPhysical = view.findViewById(R.id.tvCardPhysical);
+        tvCardDisease = view.findViewById(R.id.tvCardDisease);
+        tvCardAllergy = view.findViewById(R.id.tvCardAllergy);
+        tvCardMeds = view.findViewById(R.id.tvCardMeds);
+        tvCardInsurance = view.findViewById(R.id.tvCardInsurance);
+        tvCardContact1 = view.findViewById(R.id.tvCardContact1);
+        tvCardContact2 = view.findViewById(R.id.tvCardContact2);
+        btnGoToEdit = view.findViewById(R.id.btnGoToEdit);
 
-            tvDispNama = view.findViewById(R.id.tvDispNama);
-            tvDispGoldar = view.findViewById(R.id.tvDispGoldar);
-            tvDispAlergi = view.findViewById(R.id.tvDispAlergi);
-            tvDispKontak = view.findViewById(R.id.tvDispKontak);
+        loadProfileData();
 
-            btnSave = view.findViewById(R.id.btnSave);
-
-            if (btnSave != null) {
-                btnSave.setOnClickListener(v -> updateMedicalCard());
-            }
-        } catch (Exception e) {
-            // Jika terjadi error saat inisialisasi, aplikasi tidak langsung force close
-            e.printStackTrace();
-        }
+        btnGoToEdit.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+            startActivity(intent);
+        });
 
         return view;
     }
 
-    private void updateMedicalCard() {
-        // Cek null untuk menghindari NullPointerException
-        if (etNama == null || etGoldar == null || etAlergi == null || etKontak == null) return;
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadProfileData();
+    }
 
-        String nama = etNama.getText().toString().trim();
-        String goldar = etGoldar.getText().toString().trim();
-        String alergi = etAlergi.getText().toString().trim();
-        String kontak = etKontak.getText().toString().trim();
+    private void loadProfileData() {
+        SharedPreferences prefs = requireActivity().getSharedPreferences("ReAksiProfile", Context.MODE_PRIVATE);
 
-        if (nama.isEmpty()) {
-            etNama.setError("Nama tidak boleh kosong");
-            return;
-        }
-
-        // Update Tampilan Preview
-        if (tvDispNama != null) tvDispNama.setText("" + nama.toUpperCase());
-        if (tvDispGoldar != null) tvDispGoldar.setText(goldar.isEmpty() ? "-" : goldar.toUpperCase());
-        if (tvDispAlergi != null) tvDispAlergi.setText(alergi.isEmpty() ? "-" : alergi);
-        if (tvDispKontak != null) tvDispKontak.setText("Emergency Call: " + (kontak.isEmpty() ? "-" : kontak));
-
-        if (getContext() != null) {
-            Toast.makeText(getContext(), "Medical Card Berhasil Diperbarui!", Toast.LENGTH_SHORT).show();
-        }
+        tvCardName.setText(prefs.getString("NAME", "-").toUpperCase());
+        tvCardAgeGen.setText("USIA & GENDER: " + prefs.getString("AGEGEN", "-").toUpperCase());
+        tvCardBlood.setText("GOLONGAN DARAH: " + prefs.getString("BLOOD", "-").toUpperCase());
+        tvCardPhysical.setText("TB / BB: " + prefs.getString("PHYSICAL", "-").toUpperCase());
+        tvCardDisease.setText("PENYAKIT BAWAAN: " + prefs.getString("DISEASE", "-").toUpperCase());
+        tvCardAllergy.setText("ALERGI: " + prefs.getString("ALLERGY", "-").toUpperCase());
+        tvCardMeds.setText("OBAT RUTIN: " + prefs.getString("MEDS", "-").toUpperCase());
+        tvCardInsurance.setText("NO BPJS/ASURANSI: " + prefs.getString("INSURANCE", "-").toUpperCase());
+        tvCardContact1.setText("1. " + prefs.getString("CONTACT1", "-"));
+        tvCardContact2.setText("2. " + prefs.getString("CONTACT2", "-"));
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EDIT MEDICAL INFO"
+            android:fontFamily="sans-serif-black"
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Nama Lengkap" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etAgeGen" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Usia &amp; Jenis Kelamin (Cth: 20L / 25P)" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etBlood" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Golongan Darah (A/B/AB/O)" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etPhysical" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Tinggi Badan / Berat Badan" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etDisease" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Penyakit Bawaan (Asma, Jantung, dll)" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etAllergy" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Riwayat Alergi (Obat/Makanan)" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etMeds" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="Obat Rutin Yang Dikonsumsi" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etInsurance" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="No. BPJS atau Asuransi" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etContact1" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="No. HP Darurat Utama (Ayah/Ibu)" android:inputType="phone" android:paddingHorizontal="16dp" android:layout_marginBottom="12dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+        <EditText android:id="@+id/etContact2" android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/neo_brutal_white" android:hint="No. HP Darurat Cadangan" android:inputType="phone" android:paddingHorizontal="16dp" android:layout_marginBottom="30dp" android:textColor="#000000" android:fontFamily="sans-serif-medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/neo_brutal_blue"
+            android:text="SIMPAN DATA"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+</ScrollView>

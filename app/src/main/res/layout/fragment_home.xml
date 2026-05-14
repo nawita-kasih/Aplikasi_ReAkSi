@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
@@ -60,6 +61,14 @@
                 android:background="@drawable/neo_brutal_yellow"
                 android:gravity="center"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_senter"
+                    android:layout_marginBottom="8dp"
+                    app:tint="#000000"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,6 +87,14 @@
                 android:background="@drawable/neo_brutal_blue"
                 android:gravity="center"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_call"
+                    android:layout_marginBottom="8dp"
+                    app:tint="#FFFFFF"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,6 +113,14 @@
                 android:background="@drawable/neo_brutal_white"
                 android:gravity="center"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_cpr"
+                    android:layout_marginBottom="8dp"
+                    app:tint="#000000"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,14 +139,52 @@
                 android:background="@drawable/neo_brutal_white"
                 android:gravity="center"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_maps"
+                    android:layout_marginBottom="8dp"
+                    app:tint="#000000"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NEAREST RS"
+                    android:text="MAPS RS"
                     android:fontFamily="sans-serif-black"
                     android:textColor="#000000"
                     android:textStyle="bold"/>
             </LinearLayout>
         </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/btnQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/neo_brutal_container"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_quiz"
+                android:layout_marginEnd="12dp"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UJI PENGETAHUAN P3K"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
