@@ -5,7 +5,8 @@
     android:layout_marginBottom="16dp"
     android:background="@drawable/neo_brutal_container"
     android:orientation="horizontal"
-    android:padding="2dp">
+    android:padding="2dp"
+    android:fitsSystemWindows="true">
 
     <View
         android:id="@+id/viewAccentNeo"

@@ -25,6 +25,7 @@ public class KatalogFragment extends Fragment {
     private List<String> listAsli;
     private List<String> listFilter;
     private EditText etSearch;
+    private LinearLayout layoutEmpty; // Tambahan untuk layout kosong
 
     public KatalogFragment() {
         // Required empty public constructor
@@ -38,6 +39,8 @@ public class KatalogFragment extends Fragment {
         // Inisialisasi View (Materi P3)
         etSearch = view.findViewById(R.id.etSearch);
         rvKatalog = view.findViewById(R.id.rvKatalog);
+        layoutEmpty = view.findViewById(R.id.layoutEmpty); // Inisialisasi layout kosong
+
         rvKatalog.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         // Inisialisasi Data Lengkap Panduan (Daftar 8 video)
@@ -87,6 +90,15 @@ public class KatalogFragment extends Fragment {
         }
         // Beritahu adapter bahwa data berubah (P9)
         adapter.notifyDataSetChanged();
+
+        // LOGIKA PENGECEKAN DATA KOSONG
+        if (listFilter.isEmpty()) {
+            rvKatalog.setVisibility(View.GONE); // Sembunyikan list
+            layoutEmpty.setVisibility(View.VISIBLE); // Tampilkan peringatan
+        } else {
+            rvKatalog.setVisibility(View.VISIBLE); // Tampilkan list
+            layoutEmpty.setVisibility(View.GONE); // Sembunyikan peringatan
+        }
     }
 
     /**

@@ -79,14 +79,79 @@ public class DetailActivity extends AppCompatActivity {
 
     // Helper untuk merapikan kode steps
     private void setupSteps(String judul) {
-        if (judul.equals("Luka Bakar")) {
-            steps = new String[]{ "Siram luka dengan air mengalir.", "Lepaskan perhiasan.", "Tutup dengan kassa.", "Jangan pecah lepuhan." };
-        } else if (judul.equals("Tersedak")) {
-            steps = new String[]{ "Berdiri di belakang korban.", "5 tepukan punggung.", "5 tekanan perut.", "Ulangi sampai keluar." };
-        } else if (judul.equals("Pingsan")) {
-            steps = new String[]{ "Baringkan telentang.", "Angkat kaki (30cm).", "Longgarkan pakaian.", "Berikan ruang udara." };
-        } else {
-            steps = new String[]{ "Amankan lokasi.", "Periksa kesadaran.", "Hubungi 119.", "Ikuti instruksi video." };
+        switch (judul) {
+            case "Kecelakaan":
+                steps = new String[]{
+                        "Amankan lokasi kejadian dan pasang tanda bahaya.",
+                        "Jangan pindahkan korban kecuali ada ancaman nyawa (api/ledakan).",
+                        "Segera hubungi layanan gawat darurat (119).",
+                        "Hentikan perdarahan parah dengan menekan luka menggunakan kain bersih."
+                };
+                break;
+            case "Kesetrum":
+                steps = new String[]{
+                        "JANGAN sentuh korban!\n Matikan sumber listrik utama segera.",
+                        "Jauhkan sumber listrik menggunakan benda non-konduktor \n(kayu/karet kering).",
+                        "Hubungi layanan medis (119).",
+                        "Cek napas dan denyut nadi korban,\n lakukan CPR jika terhenti."
+                };
+                break;
+            case "Kram Otot":
+                steps = new String[]{
+                        "Hentikan aktivitas fisik dan istirahatkan area yang kram.",
+                        "Regangkan otot yang kram secara perlahan dan tahan.",
+                        "Pijat lembut area tersebut untuk merelaksasi otot.",
+                        "Minum air putih atau cairan elektrolit untuk mencegah dehidrasi."
+                };
+                break;
+            case "Luka Bakar":
+                steps = new String[]{
+                        "Siram luka dengan air biasa yang mengalir selama 10-20 menit.",
+                        "Lepaskan perhiasan atau pakaian ketat di sekitar luka sebelum membengkak.",
+                        "Tutup area luka dengan kassa steril atau kain bersih yang longgar.",
+                        "JANGAN memecahkan lepuhan atau mengoleskan odol/mentega."
+                };
+                break;
+            case "Luka Iris":
+                steps = new String[]{
+                        "Cuci tangan Anda dengan sabun sebelum menangani luka.",
+                        "Tekan luka dengan kain bersih selama beberapa menit untuk menghentikan darah.",
+                        "Bilas luka di bawah air mengalir untuk membersihkan kotoran.",
+                        "Tutup dengan plester atau perban steril agar tidak infeksi."
+                };
+                break;
+            case "Membersihkan Luka":
+                steps = new String[]{
+                        "Cuci tangan Anda dengan sabun dan air mengalir.",
+                        "Siram area luka dengan air bersih untuk menghilangkan debu/kotoran.",
+                        "Gunakan pinset steril jika masih ada kerikil yang menempel.",
+                        "Keringkan dengan lembut, oleskan antiseptik, lalu tutup dengan perban."
+                };
+                break;
+            case "Pingsan":
+                steps = new String[]{
+                        "Baringkan korban di tempat yang teduh dan datar.",
+                        "Angkat kakinya sedikit lebih tinggi dari dada (sekitar 30 cm).",
+                        "Longgarkan pakaian yang ketat (sabuk, kerah baju, dasi).",
+                        "Berikan ruang udara yang cukup dan jangan biarkan orang berkerumun."
+                };
+                break;
+            case "Tersedak":
+                steps = new String[]{
+                        "Berdiri di belakang korban dan peluk pinggangnya.",
+                        "Berikan 5 tepukan kuat di punggung \n(di antara tulang belikat).",
+                        "Lakukan 5 tarikan hentakan di perut (Heimlich Maneuver).",
+                        "Ulangi terus sampai benda yang menyumbat berhasil keluar."
+                };
+                break;
+            default:
+                steps = new String[]{
+                        "Tetap tenang dan amankan lokasi kejadian.",
+                        "Periksa tingkat kesadaran korban.",
+                        "Hubungi bantuan darurat medis (119).",
+                        "Ikuti instruksi video di bawah ini."
+                };
+                break;
         }
     }
 
