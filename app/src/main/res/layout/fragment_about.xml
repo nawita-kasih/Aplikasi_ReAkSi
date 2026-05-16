@@ -15,9 +15,10 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/neo_brutal_container"
-            android:padding="10dp"
-            android:layout_marginBottom="20dp">
+            android:padding="10dp">
+
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -27,77 +28,77 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ReAkSi"
             android:fontFamily="sans-serif-black"
-            android:textSize="32sp"
-            android:textColor="#000000"/>
+            android:text="ReAkSi"
+            android:textColor="#000000"
+            android:textSize="32sp" />
 
         <View
             android:layout_width="100dp"
             android:layout_height="6dp"
-            android:background="#B71C1C"
-            android:layout_marginVertical="10dp"/>
+            android:layout_marginVertical="10dp"
+            android:background="#B71C1C" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Respons Emergensi, Aksi &amp; Keselamatan Informasi"
-            android:gravity="center"
             android:fontFamily="sans-serif-black"
-            android:textColor="#333333"/>
+            android:gravity="center"
+            android:text="Respons Emergensi, Aksi &amp; Keselamatan Informasi"
+            android:textColor="#333333" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Aplikasi Emergency Health Kit interaktif yang menyediakan solusi pertolongan pertama berbasis digital di Indonesia. Aplikasi ini dirancang untuk membantu masyarakat awam menangani situasi gawat darurat dengan cepat, tenang, dan tepat sasaran.\n\nKami mengintegrasikan fitur keselamatan komprehensif yang mencakup Katalog P3K Pintar dengan panduan langkah-demi-langkah dan tutorial video untuk berbagai insiden medis. Aplikasi ini juga dilengkapi dengan alat bantu kritis seperti Metronom CPR dan senter darurat, serta akses bantuan instan untuk panggilan cepat 119 dan pencari Rumah Sakit terdekat. Untuk perlindungan ekstra, tersedia fitur Medical ID yang berfungsi sebagai kartu identitas medis offline untuk menyimpan informasi vital seperti golongan darah, riwayat alergi, dan kontak darurat."
-            android:gravity="center"
             android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="Aplikasi Emergency Health Kit interaktif yang menyediakan solusi pertolongan pertama berbasis digital yang praktis dan mudah diakses. Aplikasi ini dirancang untuk membantu masyarakat awam menangani situasi gawat darurat dengan cepat, tenang, dan tepat sasaran.\n\nKami mengintegrasikan fitur keselamatan komprehensif yang mencakup Katalog P3K Pintar dengan panduan langkah-demi-langkah dan tutorial video untuk berbagai insiden medis. Aplikasi ini juga dilengkapi dengan alat bantu kritis seperti Metronom CPR dan senter darurat, serta akses bantuan instan untuk panggilan cepat 119 dan pencari Rumah Sakit terdekat. Untuk perlindungan ekstra, tersedia fitur Medical ID yang berfungsi sebagai kartu identitas medis offline untuk menyimpan informasi vital seperti golongan darah, riwayat alergi, dan kontak darurat."
             android:textColor="#555555"
-            android:textSize="14sp"
-            android:lineSpacingExtra="4dp"/>
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@drawable/neo_brutal_yellow"
-            android:padding="20dp"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DEVELOPED BY:"
                 android:fontFamily="sans-serif-black"
+                android:text="DEVELOPED BY:"
                 android:textColor="#B71C1C"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="KELOMPOK 4 - 06TPLP005\nMOBILE PROGRAMMING 2026"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-black"
-                android:textColor="#000000"/>
+                android:gravity="center"
+                android:text="KELOMPOK 4 - 06TPLP005\nMOBILE PROGRAMMING 2026"
+                android:textColor="#000000" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000000"
-                android:layout_marginVertical="12dp"/>
+                android:layout_marginVertical="12dp"
+                android:background="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Andika Galih Pangestu (231011400241)\nNawita Kasih Prastia (231011400224)\nRavail Shodikin (231011402880)"
-                android:gravity="center"
                 android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:text="Andika Galih Pangestu (231011400241)\nNawita Kasih Prastia (231011400224)\nRavail Shodikin (231011402880)"
                 android:textColor="#000000"
-                android:textSize="14sp"
-                android:lineSpacingExtra="6dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>
